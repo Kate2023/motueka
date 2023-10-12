@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make a booking</title> 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( ".datepicker" ).datepicker();
+      } );
+      </script>
+  </head>
+<body>
+ 
+<h1>Make a booking</h1>
+<h2><a href='#'>[Return to the bookings listing]</a><a href='#'>[Return to the main page]</a></h2>
+
+  
+<form method="POST" action="makeabooking.php">
+    <label>Room (name, type,beds):</label>
+    <select name="room" id="room" required>
+    <option value="1">Kellie,S,5</option>
+    <option value="2">Herman,D,5</option>
+    <option value="3">Scarlett,D,2</option>
+    <option value="4">Jelani,S,2</option>
+    <option value="5">Sonya,S,5</option>
+    <option value="6">Miranda,S,4</option>
+    <option value="7">Helen,S,2</option>
+    <option value="8">Octavia,D,3</option>
+    <option value="9">Gretchen,D,3</option>
+    <option value="10">Bernard,S,5</option>
+    <option value="11">Dacey,D,2</option>
+    <option value="12">Preston,D,2</option>
+    <option value="11">Dane,S,4</option>
+    <option value="12">Cole,S,1</option> 
+    </select>
+   
+  <p>
+    <label for= "checkindate">Checkin date: </label>
+    <input type= "text" class="datepicker" id="checkindate" name="checkindate" required>
+    
+  </p>  
+  <p>
+    <label for= "checkoutdate">Checkout date: </label>
+    <input type= "text" class="datepicker" id="checkoutdate" name="checkoutdate"required>
+  </p>
+  <p>  
+    <label for="contactnumber">Contact number:</label>
+     <input type="tel" id="contactnumber" name="contactnumber"  pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required  >
+   </p>
+  <p>
+    <label for="extras">Booking extras: </label>
+     <input type="text" id="extras" name="extras" maxlength="200"  >
+  </p> 
+
+  <p>
+    <label for="review">Room review: </label>
+     <input type="text"  id="review" name="review" maxlength="100"  >
+  </p> 
+   <input type= "submit" name= "add" value= "Add"> <a href='#'>[Cancel]</a>
+ </form>
+
+ <br>
+ 
+<hr>
+
+<h1>Search for room availability </h1>
+
+<form method="POST" action="currentbookings.php">
+   
+    <label for= "startdate">Start date: </label>
+    <input type= "text" class="datepicker" id="startdate" name="startdate"required >
+    
+    <label for= "enddate">End date: </label>
+    <input type= "text" class="datepicker" id="enddate" name="enddate"required >
+        
+   <input type= "submit" name= "searchavailability" value= "Search availability">  
+ </form>
+ <br>
+ 
+<table border= "1">
+<thead><tr><th>Room #</th><th>Room name </th><th>Type</th><th>Beds</th></tr></thead>
+<tr><td>1</td><td> Kellie </td><td>S</td><td>5</td></tr>
+  
+</table>
+</body>
+</html>

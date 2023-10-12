@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Edit booking</title> </head>
+<body>
+ 
+<h1>Edit a booking</h1>
+<h2><a href='#'>[Return to the bookings listing]</a><a href='#'>[Return to the main page]</a></h2>
+
+  
+<form method="POST" action="editbooking.php">
+    <label>Room (name, type,beds):</label>
+    <select name="room" id="room" required>
+    <option value="1">Kellie,S,5</option>
+    <option value="2">Herman,D,5</option>
+    <option value="3">Scarlett,D,2</option>
+    <option value="4">Jelani,S,2</option>
+    <option value="5">Sonya,S,5</option>
+    <option value="6">Miranda,S,4</option>
+    <option value="7">Helen,S,2</option>
+    <option value="8">Octavia,D,3</option>
+    <option value="9">Gretchen,D,3</option>
+    <option value="10">Bernard,S,5</option>
+    <option value="11">Dacey,D,2</option>
+    <option value="12">Preston,D,2</option>
+    <option value="11">Dane,S,4</option>
+    <option value="12">Cole,S,1</option> 
+    </select>
+   
+  <p>
+    <label for= "checkindate">Checkin date: </label>
+    <input type= "date" id="checkindate" name="checkindate"required value="#">
+  </p>  
+  <p>
+    <label for= "checkoutdate">Checkout date: </label>
+    <input type= "date" id="checkoutdate" name="checkoutdate"required value="#">
+  </p>
+  <p>  
+    <label for="contactnumber">Contact number:</label>
+     <input type="tel" id="contactnumber" name="contactnumber" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required value="021 555 5555">
+   </p>
+  <p>
+    <label for="extras">Booking extras: </label>
+     <input type="text" id="extras" name="extras" maxlength="200" value="none">
+  </p> 
+
+  <p>
+    <label for="review">Room review: </label>
+     <input type="text"  id="review" name="review" maxlength="100"  value="great">
+  </p> 
+   <input type= "submit" name= "Update" value= "Update"> <a href='#'>[Cancel]</a>
+ </form>
+ 
+</body>
+</html>
